@@ -12,7 +12,7 @@ app.get('*', function (req, res) {
 	lng = lng.split(';')[0].split(",")[0];
 	result['language'] = lng;
 	
-	var ip = req.headers[''];
+	var ip = req.headers['x-forwarded-for'];
 	result['ipaddress'] = ip;
 	
 	res.json(result);
