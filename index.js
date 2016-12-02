@@ -13,7 +13,7 @@ app.get('*', function (req, res) {
 	result['language'] = lng;
 	
 	var ip = req.headers[''];
-	result['idaddress'] = ip;
+	result['ipaddress'] = ip;
 	
 	res.json(result);
 });
